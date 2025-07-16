@@ -5,8 +5,8 @@
 
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>com.example</groupId>
-  <artifactId>sonarmevan-project</artifactId>
+  <groupId>com.sonart</groupId>
+  <artifactId>tukaram-sonarqube-project</artifactId>
   <version>1.0-SNAPSHOT</version>
   <packaging>jar</packaging>
 
@@ -27,11 +27,11 @@
   <distributionManagement>
     <repository>
       <id>nexus</id>
-      <url>http://3.110.142.126:8081/repository/maven-releases/</url>
+      <url>http://65.2.179.223:8081/repository/maven-releases/</url>
     </repository>
     <snapshotRepository>
       <id>nexus</id>
-      <url>http://3.110.142.126:8081/repository/maven-snapshots/</url>
+      <url>http://65.2.179.223:8081/repository/maven-snapshots/</url>
     </snapshotRepository>
   </distributionManagement>
 

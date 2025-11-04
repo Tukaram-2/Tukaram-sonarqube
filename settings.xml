@@ -7,10 +7,10 @@
   <servers>
     <!-- Nexus credentials -->
     <server>
-      <id>nexus</id>
-      <username>${admin}</username>
-      <password>${October@#54321}</password>
-    </server>
+  <id>nexus</id>
+  <username>${NEXUS_USER}</username>
+  <password>${NEXUS_PASS}</password>
+ </server>
 
     <!-- (Optional) SonarQube token-based auth if you want Maven to handle it directly -->
     <server>
@@ -46,7 +46,7 @@
         </repository>
         <repository>
           <id>nexus</id>
-          <url>http://13.203.18.114:8081/repository/maven-releases/</url>
+          <url>http://13.201.182.31:8081/repository/maven-releases/</url>
           <releases>
             <enabled>true</enabled>
           </releases>

@@ -1,7 +1,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
-         http://maven.apache.org/xsd/maven-4.0.0.xsd">
+                             http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
   <modelVersion>4.0.0</modelVersion>
 
@@ -10,9 +10,14 @@
   <version>1.0-SNAPSHOT</version>
   <packaging>jar</packaging>
 
+  <name>Tukaram SonarQube Project</name>
+  <description>Sample Maven project integrated with Jenkins, SonarQube, and Nexus</description>
+  <url>http://13.203.18.114:8081/</url>
+
   <properties>
-    <maven.compiler.source>1.8</maven.compiler.source>
-    <maven.compiler.target>1.8</maven.compiler.target>
+    <maven.compiler.source>17</maven.compiler.source>
+    <maven.compiler.target>17</maven.compiler.target>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
 
   <dependencies>
@@ -27,11 +32,11 @@
   <distributionManagement>
     <repository>
       <id>nexus</id>
-      <url>http://65.2.179.223:8081/repository/maven-releases/</url>
+      <url>http://13.203.18.114:8081/repository/maven-releases/</url>
     </repository>
     <snapshotRepository>
       <id>nexus</id>
-      <url>http://65.2.179.223:8081/repository/maven-snapshots/</url>
+      <url>http://13.203.18.114:8081/repository/maven-snapshots/</url>
     </snapshotRepository>
   </distributionManagement>
 
@@ -41,7 +46,10 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
-        <version>3.8.1</version>
+        <version>3.11.0</version>
+        <configuration>
+          <release>17</release>
+        </configuration>
       </plugin>
 
       <!-- Surefire plugin (for running tests) -->
@@ -59,4 +67,5 @@
       </plugin>
     </plugins>
   </build>
+
 </project>

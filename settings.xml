@@ -8,8 +8,8 @@
     <!-- Nexus credentials -->
     <server>
       <id>nexus</id>
-      <username>${NEXUS_USER}</username>
-      <password>${NEXUS_PASS}</password>
+      <username>${admin}</username>
+      <password>${October@#54321}</password>
     </server>
 
     <!-- (Optional) SonarQube token-based auth if you want Maven to handle it directly -->
@@ -25,7 +25,7 @@
     <mirror>
       <id>nexus</id>
       <name>Nexus Mirror</name>
-      <url>http://13.203.18.114:8081/repository/maven-public/</url>
+      <url>http://13.201.182.31:8081/repository/maven-public/</url>
       <mirrorOf>*</mirrorOf>
     </mirror>
   </mirrors>

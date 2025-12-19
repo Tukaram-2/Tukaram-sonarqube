@@ -40,6 +40,13 @@
     </snapshotRepository>
   </distributionManagement>
 
+<distributionManagement>
+    <snapshotRepository>
+        <id>Nexus</id>
+        <url>http://65.2.56.227:8081/repository/maven-snapshots/</url>
+    </snapshotRepository>
+</distributionManagement>
+
   <build>
     <plugins>
       <!-- Compiler plugin -->
@@ -69,10 +76,3 @@
   </build>
 
 </project>
-
-<distributionManagement>
-    <snapshotRepository>
-        <id>Nexus</id>
-        <url>http://65.2.56.227:8081/repository/maven-snapshots/</url>
-    </snapshotRepository>
-</distributionManagement>

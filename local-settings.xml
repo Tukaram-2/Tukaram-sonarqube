@@ -54,7 +54,7 @@
     <server>
       <id>nexus</id>
       <username>admin</username>
-      <password>January@#54321</password>
+      <password>January@#12345</password>
     </server>
   </servers>
 </settings>

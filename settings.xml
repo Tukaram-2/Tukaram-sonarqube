@@ -1,25 +1,28 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<settings>
-  <localRepository>${installer:nexus.evalGuideDir}/maven/repository</localRepository>
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0
+                              http://maven.apache.org/xsd/settings-1.0.0.xsd">
+
+  <!-- Local repository (optional, defaults to ~/.m2/repository) -->
+  <!-- <localRepository>/path/to/local/repo</localRepository> -->
+
   <mirrors>
+    <!-- Redirect all requests to Nexus public repository -->
     <mirror>
-      <!--Send all requests to the public group -->
-      <id>Nexus</id>
+      <id>nexus</id>
       <mirrorOf>*</mirrorOf>
-      <url>http://3.110.139.66:8081/nexus/content/groups/public</url>
+      <url>http://3.110.139.66:8081/repository/maven-public/</url>
     </mirror>
   </mirrors>
-  <activeProfiles>
-    <!--make the profile active all the time -->
-    <activeProfile>nexus</activeProfile>
-  </activeProfiles>
+
   <profiles>
     <profile>
       <id>nexus</id>
+      <!-- Override repositories and pluginRepositories -->
       <repositories>
         <repository>
           <id>central</id>
-          <url>http://central</url>
+          <url>https://repo.maven.apache.org/maven2</url>
           <releases>
             <enabled>true</enabled>
           </releases>
@@ -31,7 +34,7 @@
       <pluginRepositories>
         <pluginRepository>
           <id>central</id>
-          <url>http://central</url>
+          <url>https://repo.maven.apache.org/maven2</url>
           <releases>
             <enabled>true</enabled>
           </releases>
@@ -42,14 +45,18 @@
       </pluginRepositories>
     </profile>
   </profiles>
-  <pluginGroups>
-    <pluginGroup>org.sonatype.plugins</pluginGroup>
-  </pluginGroups>
+
+  <activeProfiles>
+    <activeProfile>nexus</activeProfile>
+  </activeProfiles>
+
   <servers>
+    <!-- This id must match the <id> in pom.xml's distributionManagement -->
     <server>
-      <id>Nexus</id>
-      <username>admin</username>
-      <password>January@#12345</password>
+      <id>nexus</id>
+      <username>${env.NEXUS_USER}</username>
+      <password>${env.NEXUS_PASS}</password>
     </server>
   </servers>
+
 </settings>

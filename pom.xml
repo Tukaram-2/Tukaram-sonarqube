@@ -29,16 +29,16 @@
     </dependency>
   </dependencies>
 
-  <distributionManagement>
+ <distributionManagement>
     <repository>
-      <id>Nexus</id>
+      <id>nexus</id> <!-- make lowercase to match settings.xml -->
       <url>http://3.110.139.66:8081/repository/maven-releases/</url>
     </repository>
     <snapshotRepository>
-      <id>Nexus</id>
+      <id>nexus</id> <!-- lowercase as well -->
       <url>http://3.110.139.66:8081/repository/maven-snapshots/</url>
     </snapshotRepository>
-  </distributionManagement>
+</distributionManagement>
 
   <build>
     <plugins>

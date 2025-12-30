@@ -12,7 +12,7 @@
 
   <name>Tukaram SonarQube Project</name>
   <description>Sample Maven project integrated with Jenkins, SonarQube, and Nexus</description>
-  <url>http://65.2.56.227:8081/</url>
+  <url>http://3.110.139.66:8081/</url>
 
   <properties>
     <maven.compiler.source>17</maven.compiler.source>
@@ -32,11 +32,11 @@
   <distributionManagement>
     <repository>
       <id>nexus</id>
-      <url>http://65.2.56.227:8081/repository/maven-releases/</url>
+      <url>http://3.110.139.66:8081/repository/maven-releases/</url>
     </repository>
     <snapshotRepository>
       <id>nexus</id>
-      <url>http://65.2.56.227:8081/repository/maven-snapshots/</url>
+      <url>http://3.110.139.66:8081/repository/maven-snapshots/</url>
     </snapshotRepository>
   </distributionManagement>
 
